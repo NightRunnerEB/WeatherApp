@@ -10,13 +10,13 @@ import UIKit
 class WeatherViewController: UIViewController {
 
     let weatherTypes = [
-        ("Sunny", NSLocalizedString("Sunny", comment: ""), "sun.max.fill", UIColor.yellow),
-        ("Rainy", NSLocalizedString("Rainy", comment: ""), "drop.fill", UIColor.blue),
-        ("Stormy", NSLocalizedString("Stormy", comment: ""), "cloud.bolt.rain.fill", UIColor.gray),
-        ("Foggy", NSLocalizedString("Foggy", comment: ""), "cloud.fog.fill", UIColor.lightGray),
-        ("Snowy", NSLocalizedString("Snowy", comment: ""), "snowflake", UIColor.cyan),
-        ("Windy", NSLocalizedString("Windy", comment: ""), "wind", UIColor.green),
-        ("Thunderstorm", NSLocalizedString("Thunderstorm", comment: ""), "cloud.bolt.fill", UIColor.darkGray)
+        ("Sunny", "Sunny".localized, "sun.max.fill", UIColor.yellow),
+        ("Rainy", "Rainy".localized, "drop.fill", UIColor.blue),
+        ("Stormy", "Stormy".localized, "cloud.bolt.rain.fill", UIColor.gray),
+        ("Foggy", "Foggy".localized, "cloud.fog.fill", UIColor.lightGray),
+        ("Snowy", "Snowy".localized, "snowflake", UIColor.cyan),
+        ("Windy", "Windy".localized, "wind", UIColor.green),
+        ("Thunderstorm", "Thunderstorm".localized, "cloud.bolt.fill", UIColor.darkGray)
     ]
 
     var selectedWeatherIndexPath: IndexPath?
@@ -76,7 +76,7 @@ class WeatherViewController: UIViewController {
     }
 
     private func setupSelectionIndicator() {
-        selectionIndicator.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        selectionIndicator.backgroundColor = UIColor.white.withAlphaComponent(0.07)
         selectionIndicator.layer.cornerRadius = 20
         selectionIndicator.layer.borderWidth = 2
         selectionIndicator.layer.borderColor = UIColor.white.cgColor
